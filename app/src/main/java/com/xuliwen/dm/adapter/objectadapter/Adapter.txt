@@ -1,0 +1,15 @@
+优点：
+1. 将处理适配者的代码就放在适配器中，当增加一个适配者的时候，只需增加一个适配器处理这个适配者即可，易扩展
+（为什么不放在客户端去处理适配者呢，如果放在客户端，会使得客户端的代码过于臃肿，而且会使得客户端和适
+配者紧耦合，不便扩展），这个优点可以参照ListView
+
+2. Android中的应用场景：
+接口适配器模式：ListView与Adapter
+ListView（客户端）和SimpleAdapter（适配器），data和item的布局（适配者），BaseAdapter（目标类）
+1）ListView要显示各种item，如果没有适配器，那么处理各种item的过程就会写在ListView中，这样ListView将很
+臃肿
+2）定义一个目标接口（Adapter）来定义处理适配者所需的所有接口方法（如getCount，getItem，getView），那么当
+处理一种item的时候，就自定义一个MyAdapter继承BaseAdapter（BaseAdapter最终实现了Adapter接口）来实现接口方法。这样就将适配者的
+处理放在MyAdapter中，从而实现了ListView与data和item的布局的解耦
+
+3. ListView也可以称为桥接模式。

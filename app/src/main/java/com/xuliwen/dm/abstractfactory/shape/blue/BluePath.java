@@ -1,0 +1,17 @@
+package com.xuliwen.dm.abstractfactory.shape.blue;
+
+import android.util.Log;
+
+import com.xuliwen.dm.Constants;
+import com.xuliwen.dm.abstractfactory.iml.Shape;
+
+/**
+ * Created by xlw on 2017/5/1.
+ */
+
+public class BluePath implements Shape {
+    @Override
+    public void print() {
+        Log.e(Constants.TAG,"我是BluePath");
+    }
+}
